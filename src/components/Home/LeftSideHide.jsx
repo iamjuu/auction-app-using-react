@@ -7,13 +7,14 @@ const LeftSide = () => {
     <div>
       <button className="lg:hidden" onClick={() => setSidebtn(!sidebtn)}>
         {sidebtn ? (
-          <div className="w-44 h-44 bg-gray-100 mt-5 ml-5 absolute">
+          <div className="w-44 h-56 bg-gray-100 mt-5 ml-5 absolute">
             <ul className="flex flex-col justify-start gap-2 p-2">
               <h4>TYPE OF PROPERTY</h4>
               <li className="hover:bg-[#007bff] hover:text-white p-1">Lands</li>
               <li className="hover:bg-[#007bff] hover:text-white p-1">Buildings</li>
               <li className="hover:bg-[#007bff] hover:text-white p-1">House</li>
               <li className="hover:bg-[#007bff] hover:text-white p-1">Flate</li>
+
             </ul>
           </div>
         ) : (

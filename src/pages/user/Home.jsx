@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/Header/Header'
-import LeftSide from '../components/Home/LeftSideHide';
-import Card from '../components/Home/Card';
-import RightSide from '../components/Home/RightSide';
+import Header from '../../components/Header/Header'
+import LeftSide from '../../components/Home/LeftSideHide';
+import Card from '../../components/Home/Card';
+import RightSide from '../../components/Home/RightSide';
 
 const Home = () => {
   return (
