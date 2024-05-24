@@ -43,7 +43,7 @@ const [menu,setMenu]=useState([false])
               className='lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>About</a>
           </li>
           <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-              className='lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Sevice</a>
+              className='lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Service</a>
           </li>
           <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
               className='lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]'>Contect</a>
@@ -60,7 +60,7 @@ const [menu,setMenu]=useState([false])
        <ul  className=' flex flex-col justify-start text-sm w-36 bg-[#EEEEEE] text-left p-2 absolute -ml-32 mt-20'>
         <li className='hover:bg-[#007bff] hover:text-white'>home</li>
         <li className='hover:bg-[#007bff] hover:text-white'>about</li>
-        <li className='hover:bg-[#007bff] hover:text-white'>Sevice</li>
+        <li className='hover:bg-[#007bff] hover:text-white'>Service</li>
         <li  className='hover:bg-[#007bff] hover:text-white'>Contect</li>
         <li className='hover:bg-[#007bff] hover:text-white'>Help</li>
         </ul></div>  : <FaBars className=' text-2xl'  />}
