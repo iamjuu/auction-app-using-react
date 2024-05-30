@@ -35,10 +35,15 @@ const PropertyForm = () => {
   });
 
   return (
-    <form
+    <div className="flex items-center flex-col justify-center ">
+<h2 className="text-3xl">Add property</h2>
+      <form
       onSubmit={formik.handleSubmit}
-      className="p-4 max-w-md mx-auto bg-gray-100 rounded-md"
+      className="flex flex-col items-center w-[300px] sm:w-[700px] md:[900px] mt-10 lg:[1200px]"
     >
+      <div className="">
+
+      
       <div className="mb-4 ">
         <label
           htmlFor="name"
@@ -53,7 +58,7 @@ const PropertyForm = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.name}
-          className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+          className="  mt-1 block w-full p-2 border border-gray-300 rounded-md"
         />
         {formik.touched.name && formik.errors.name ? (
           <div className="text-red-500 text-sm">{formik.errors.name}</div>
@@ -169,7 +174,10 @@ const PropertyForm = () => {
           Submit
         </button>
       </div>
+      </div>
     </form>
+    </div>
+
   );
 };
 

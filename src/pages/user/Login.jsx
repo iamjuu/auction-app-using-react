@@ -1,21 +1,20 @@
-import React from 'react';
-import axios from 'axios';
 import axiosInstance from '../../instence/axiosinstance'
 import LoginForm from '../../components/Main/LoginForm'
 import { useNavigate } from 'react-router-dom';
+
 const Login = () => {
   const navigate = useNavigate()
-  const  handleSubmit= async(Data)=>{
 
+  const  handleSubmit= async(data)=>{
     try {
-      const response = axiosInstance.post('/login',Data)
-      console.log(response,'login response');
-      navigate('/Home')
+      const response = await axiosInstance.post('/signup',data)
+      console.log(data,'data');
+      console.log(response,'front data');
+      navigate('/');
     } catch (error) {
-      console.log(error,'error in login post');
-      
+      console.error('There was an error login!', error);
     }
-  }
+  };
 
   return (
     <div className="flex justify-center items-center h-screen">

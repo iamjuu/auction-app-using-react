@@ -1,21 +1,30 @@
-import { Link } from 'react-router-dom';
+import React from "react";
 import { Formik, Form, Field } from 'formik';
-import { AiOutlineUser } from 'react-icons/ai';
 import { HiOutlineMail } from 'react-icons/hi';
 import { GoLock } from 'react-icons/go';
+import { Link } from 'react-router-dom';
+import Bg from '../../assets/main/boys.png'
 
 
-const initaialValue ={
- email: '',   
- password: '',
+const initialValues={
+  email:'',
+  password:''
 
 }
-const LoginForm = ({ handleSubmit }) => {
+
+function UserLogin({handleSubmit}) {
+
   return (
-    <Formik initialValues={initaialValue} onSubmit={handleSubmit}>
+    <div className='flex flex-col justify-center items-center bg-white p-8 rounded-md shadow-lg'>
+      <div className='w-28 h-28   '> <h1 className='text-5xl font-bold'>Login</h1></div>
+      <div className='flex'>   
+<div>
+  <img className='w-96 ' src={Bg} alt="" />
+</div>
+       
+    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
     {({ errors, touched }) => (
-      <Form className="max-w-md mx-auto bg-white p-8 rounded-md shadow-md">
-        
+      <Form className="max-w-md mx-auto  ">
       
 
         <div className="mb-4">
@@ -58,16 +67,18 @@ const LoginForm = ({ handleSubmit }) => {
           type="submit"
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
-          Sign Up
+          Login 
         </button>
         <div className="mt-4 text-center">
           <span>Don't have an account? </span>
-          <Link to="/signup" className="text-blue-500 hover:text-blue-700">Signup</Link>
+          <Link to="/signup" className="text-blue-500 hover:text-blue-700">login</Link>
         </div>
       </Form>
     )}
   </Formik>
+  </div>
+  </div>
   );
 }
 
-export default LoginForm;
+export default UserLogin;

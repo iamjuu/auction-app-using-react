@@ -1,6 +1,5 @@
-import React from 'react';
 import SignupForm from '../../components/Main/SignupForm';
-import axios from 'axios';
+import axiosInstance from '../../instence/axiosinstance'; 
 import { useNavigate } from 'react-router-dom';
 
 function UserSignup() {
@@ -8,10 +7,11 @@ function UserSignup() {
 
   const handleSubmit = async (data) => {
     try {
-      const response = await axios.post('http://localhost:5000/signup', data);
+      const response = await axiosInstance.post('/signup',data)
+      console.log(response,'front data');
       navigate('/login');
     } catch (error) {
-      console.error('There was an error!', error);
+      console.error('There was an error in signup!', error);
     }
   };
 
