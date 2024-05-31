@@ -19,7 +19,7 @@ const LeftSide = () => {
           </div>
         ) : (
           <div className="ml-3 mt-3">
-            <PiIslandBold className="text-xl md:hidden  relative ml-[400px]" />
+<PiIslandBold className="text-xl md:hidden relative ml-4 sm:ml-8 md:ml-[630px]" />
           </div>
         )}
       </button>
