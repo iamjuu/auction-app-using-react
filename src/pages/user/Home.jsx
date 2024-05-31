@@ -7,7 +7,7 @@ const Home = () => {
     <div>
         <div className='flex flex-col  md:flex-row justify-center items-center gap-20'>
         <LeftSide/>
-        <Card/>
+        <Card />
         <RightSide/>
         </div>
     </div>

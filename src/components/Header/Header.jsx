@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
+import AddBtn from '../btn'
 const Header = () => {
+
+
+
   const [menu, setMenu] = useState([false]);
 
   return (
@@ -51,7 +54,21 @@ const Header = () => {
               </li>
             </ul>
           </div>
-
+          <div className="bg-red-400 h-6 rounded  ">
+            
+        <a href="/addproperty">   <AddBtn 
+  className='' 
+  style={{ 
+    borderRadius: '10px', 
+    width: '100px', 
+    boxShadow: `0 0 0 2px #ff0000`, 
+    background: `linear-gradient(to right, #42A5F5, #E3F2FD)`,
+    transition: 'opacity 0.3s ease' 
+  }} 
+  name={'Add property'} 
+/></a>
+          </div>
+          
           <button
             onClick={() => setMenu(!menu)}
             id="toggleOpen"
@@ -60,7 +77,7 @@ const Header = () => {
             {!menu ? (
               <div>
                 <FaTimes className="text-xl " />
-                <ul className=" flex flex-col justify-start text-sm w-36 bg-[#EEEEEE] text-left p-2 absolute -ml-32 mt-20">
+                <ul className=" flex flex-col justify-start text-sm h-42 w-36 bg-[#EEEEEE] text-left p-2 absolute gap-3 -ml-32 mt-20">
                  <a href="/"> <li className="hover:bg-[#007bff] hover:text-white">
                     home
                     </li></a>
@@ -74,6 +91,9 @@ const Header = () => {
                     Contect
                   </li></a>
                 </ul>
+                <div>
+                  <button></button>
+                </div>
               </div>
             ) : (
               <FaBars className=" text-2xl" />

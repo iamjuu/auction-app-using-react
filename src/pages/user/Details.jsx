@@ -2,7 +2,7 @@ import React from 'react';
 
 const Details = () => {
   return (
-    <div className='flex justify-center flex-col items-center gap-3'>
+    <div className='mt-10  flex justify-center flex-col gap-5 items-center '>
     <div >
       <div className='w-[200px] h-[200px] sm:w-[500px] md:w-[700px] lg:w-[900px] bg-red-100'>
       </div>
