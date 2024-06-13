@@ -14,7 +14,14 @@ const Home = () => {
             <RiMenuFoldFill className="md:hidden text-4xl" />
           </button>
           {menu && (
+
+            
             <ul className="bg-gray-100 mt-44 w-36 flex flex-col items-center absolute">
+              <li>
+                <button>
+                  hello
+                </button>
+              </li>
               <li className="hover:bg-blue-200 w-full text-center py-2">
                 <Link to="/house" className="block w-full">House</Link>
               </li>
@@ -41,6 +48,11 @@ const Home = () => {
       {/* Static menu for larger screens */}
       <div className="hidden md:flex">
         <ul className="md:flex gap-10">
+        <li className="p-2  ">
+                <button className=" bg-red-600 w-14 border shadow-xl text-white rounded-md">
+                  Live
+                </button>
+              </li>
           <li className="hover:bg-blue-200 p-2 rounded">
             <Link to="/house" className="block">House</Link>
           </li>

@@ -7,7 +7,7 @@ const Details = () => {
 
    
      <div className=' justify-center  flex'>  
-    <div className=' sm:w-40 sm:h-32  w-96 h-80 bg-gray-400  '>
+    <div className='  w-96 h-80 bg-gray-400  md:w-[500px]  lg:w-[700px] '>
     </div>
     </div>
 

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import Otpimg from '../../assets/main/otp.png'
 
 const Otp = () => {
   const [otp, setOtp] = useState(['', '', '', '','']);      
@@ -16,11 +17,16 @@ const Otp = () => {
       inputRefs.current[index + 1].focus();
       
     }
+
+    
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md">
+      <div className=" flex flex-col items-center bg-white p-8 rounded-lg shadow-md">
+        <div>
+          <img src={Otpimg} className='w-36' alt="" />
+        </div>
         <h2 className="text-2xl font-bold mb-6 text-center">Enter OTP</h2>
         <div className="flex justify-center mb-6">
           {otp.map((value, index) => (

@@ -8,8 +8,13 @@ function UserSignup() {
   const handleSubmit = async (data) => {
     try {
       const response = await axiosInstance.post('/signup',data)
-      console.log(response,'front data');
-      navigate('/login');
+      console.log(response.data);
+      if(response.status==200){
+        navigate('/otp');
+        }else{
+          navigate('/signup')
+        }
+
     } catch (error) {
       console.error('There was an error in signup!', error);
     }
