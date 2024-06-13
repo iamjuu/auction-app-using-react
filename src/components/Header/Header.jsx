@@ -1,74 +1,66 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import AddBtn from '../btn'
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import AddBtn from '../btn';
+
 const Header = () => {
-
-
-
   const [menu, setMenu] = useState([false]);
 
   return (
     <>
       <div className="flex border-b py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50">
-        <div className="flex flex-wrap  gap-5 w-full ">
-          <a href="">
-            <p className="text-blue-700 text-lg font-bold hover:translate-x-[10p] hover:translate-y-[10px] delay-200 duration-200 ">
+        <div className="flex flex-wrap gap-5 w-full">
+          <Link to="">
+            <p className="text-blue-700 text-lg font-bold hover:translate-x-[10p] hover:translate-y-[10px] delay-200 duration-200">
               Auction
             </p>
-          </a>
+          </Link>
 
           <div id="collapseMenu">
-            <ul className="hidden  sm:flex sm:block  ">
+            <ul className="hidden sm:flex sm:block">
               <li className="max-lg:border-b max-lg:py-3 px-3">
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   className="lg:hover:text-[#007bff] text-[#007bff] block font-semibold text-[15px]"
                 >
                   Home
-                </a>
+                </Link>
               </li>
-
               <li className="max-lg:border-b max-lg:py-3 px-3">
-                <a
-                  href="/about"
+                <Link
+                  to="/about"
                   className="lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li className="max-lg:border-b max-lg:py-3 px-3">
-                <a
-                  href="/service"
+                <Link
+                  to="/service"
                   className="lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
                 >
                   Service
-                </a>
+                </Link>
               </li>
               <li className="max-lg:border-b max-lg:py-3 px-3">
-                <a
-                  href="/contect"
+                <Link
+                  to="/contect"
                   className="lg:hover:text-[#007bff] text-gray-500 block font-semibold text-[15px]"
                 >
                   Contect
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
-          <div className="bg-red-400 h-6 rounded  ">
-            
-        <a href="/addproperty">   <AddBtn 
-  className='' 
-  style={{ 
-    borderRadius: '10px', 
-    width: '100px', 
-    boxShadow: `0 0 0 2px #ff0000`, 
-    background: `linear-gradient(to right, #42A5F5, #E3F2FD)`,
-    transition: 'opacity 0.3s ease' 
-  }} 
-  name={'Add property'} 
-/></a>
+          <div className="">
+            <Link to="/addproperty">
+              <AddBtn
+                className="bg-blue-800 text-white font-bold py-2 px-4 rounded cursor-pointer"
+                name={"Add property"}
+              />
+            </Link>
           </div>
-          
+
           <button
             onClick={() => setMenu(!menu)}
             id="toggleOpen"
@@ -76,27 +68,27 @@ const Header = () => {
           >
             {!menu ? (
               <div>
-                <FaTimes className="text-xl " />
-                <ul className=" flex flex-col justify-start text-sm h-42 w-36 bg-[#EEEEEE] text-left p-2 absolute gap-3 -ml-32 mt-20">
-                 <a href="/"> <li className="hover:bg-[#007bff] hover:text-white">
-                    home
-                    </li></a>
-                <a href="/about">  <li className="hover:bg-[#007bff] hover:text-white">
-                    About
-                    </li></a>
-                  <a href="/service"><li className="hover:bg-[#007bff] hover:text-white">
-                    Service
-                  </li></a>
-                  <a href="/contect"><li className="hover:bg-[#007bff] hover:text-white">
-                    Contect
-                  </li></a>
+                <FaTimes className="text-xl" />
+                <ul className="flex flex-col justify-start text-sm h-42 w-36 bg-[#EEEEEE] text-left p-2 absolute gap-3 -ml-32 mt-20">
+                  <Link to="/">
+                    <li className="hover:bg-[#007bff] hover:text-white">Home</li>
+                  </Link>
+                  <Link to="/about">
+                    <li className="hover:bg-[#007bff] hover:text-white">About</li>
+                  </Link>
+                  <Link to="/service">
+                    <li className="hover:bg-[#007bff] hover:text-white">Service</li>
+                  </Link>
+                  <Link to="/contect">
+                    <li className="hover:bg-[#007bff] hover:text-white">Contect</li>
+                  </Link>
                 </ul>
                 <div>
                   <button></button>
                 </div>
               </div>
             ) : (
-              <FaBars className=" text-2xl" />
+              <FaBars className="text-2xl" />
             )}
           </button>
 

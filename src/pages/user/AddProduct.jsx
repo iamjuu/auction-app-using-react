@@ -2,44 +2,63 @@ import axiosInstance from "../../instence/axiosinstance";
 import { useState } from "react";
 
 const PropertyForm = () => {
-  // step 1
-
+  // Step 1: Initialize state
   const [formData, setFormData] = useState({
-    name:'',
-    propertyname:'',
-    minimumdata:'',
-    propertyimage:'',
-    Phone:'',
-    Address:''
-
+    name: '',
+    propertyname: '',
+    minimumdata: '',
+    propertyimage: '',
+    Phone: '',
+    Address: '',
+    propertyType: ''
   });
-  const handleChange=(event)=>{
-    event.preventDefault()
-    const {name,value}=event.target.value
-    setFormData({...formData,[name]:value})
 
-  }
+  // Handle change function
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-  const handleSubmit =async ( formData) => {
+  // Handle file change
+  const handleFileChange = (event) => {
+    const { name, files } = event.target;
+    setFormData({ ...formData, [name]: files[0] });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     console.log("here");
     console.log(formData, "form Data");
 
-    const response = await axiosInstance.post("/addproperty", formData);
+    // Create a FormData object to handle file upload
+    const data = new FormData();
+    for (const key in formData) {
+      data.append(key, formData[key]);
+    }
+
+    try {
+      const response = await axiosInstance.post("/addproperty", data, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.error("There was an error submitting the form!", error);
+    }
   };
 
   return (
-    <div className="flex items-center flex-col justify-center ">
+    <div className="flex items-center flex-col justify-center">
       <h2 className="text-3xl">Add property</h2>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col items-center w-[300px] sm:w-[700px] md:[900px] mt-10 lg:[1200px]"
       >
         <div className="">
-          <div className="mb-4 ">
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
-            >
+          <div className="mb-4">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
               Enter your Name
             </label>
             <input
@@ -48,12 +67,12 @@ const PropertyForm = () => {
               type="text"
               value={formData.name}
               onChange={handleChange}
-              className="  mt-1 block w-full p-2 border border-gray-300 rounded-md"
+              className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
             />
           </div>
 
           <div className="mb-4">
-            <label htmlFor="propertyname">property Name</label>
+            <label htmlFor="propertyname">Property Name</label>
             <input
               type="text"
               name="propertyname"
@@ -65,7 +84,7 @@ const PropertyForm = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="Price"> Minimum Price</label>
+            <label htmlFor="minimumdata">Minimum Price</label>
             <input
               type="text"
               name="minimumdata"
@@ -74,15 +93,15 @@ const PropertyForm = () => {
               onChange={handleChange}
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
             />
-           
           </div>
+
           <div className="mb-4">
+            <label htmlFor="propertyimage">Property Image</label>
             <input
               type="file"
               name="propertyimage"
               id="propertyimage"
-              value={formData.propertyimage}
-              onChange={handleChange}
+              onChange={handleFileChange}
               className="border border-gray-300"
             />
           </div>
@@ -97,8 +116,8 @@ const PropertyForm = () => {
               onChange={handleChange}
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
             />
-       
           </div>
+
           <div className="mb-4">
             <label htmlFor="Address">Address</label>
             <input
@@ -109,14 +128,10 @@ const PropertyForm = () => {
               onChange={handleChange}
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
             />
-           
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="propertyType"
-              className="block text-sm font-medium text-gray-700"
-            >
+            <label htmlFor="propertyType" className="block text-sm font-medium text-gray-700">
               Property Type
             </label>
             <select
@@ -132,9 +147,7 @@ const PropertyForm = () => {
               <option value="Flat" label="Flat" />
               <option value="car" label="car" />
               <option value="bike" label="bike" />
-
             </select>
-           
           </div>
 
           <div className="mt-6">

@@ -30,8 +30,11 @@ const LeftSide = () => {
           <li className="hover:bg-[#007bff] hover:text-white p-1">Buildings</li>
           <li className="hover:bg-[#007bff] hover:text-white p-1">House</li>
           <li className="hover:bg-[#007bff] hover:text-white p-1">Flate</li>
-          <li ><button>Sort</button></li>
-          <li> <button>Filter</button></li>
+          <li className="hover:bg-[#007bff] hover:text-white p-1">Vehicles</li>
+          <li className="hover:bg-[#007bff] hover:text-white p-1">Phone</li>
+
+
+        
         </ul>
       </div>
       
