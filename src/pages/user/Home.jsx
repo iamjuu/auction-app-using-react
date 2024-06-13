@@ -2,6 +2,7 @@ import { useState } from "react";
 import { RiMenuFoldFill } from "react-icons/ri"; // Corrected the icon import
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import Card from '../../components/Home/Card'
+import Caroseal from '../../components/caroseal/Carseal'
 const Home = () => {
   const [menu, setMenu] = useState(false);
 
@@ -61,6 +62,12 @@ const Home = () => {
         </ul>
       </div>
     </div>
+    {/* caroseal   */}
+   <div>  
+
+    <Caroseal/>
+   </div>
+   {/* card   */}
 <div className=" mt-5  w-screen  items-center justify-center  flex gap-5 flex-wrap">
   <Card/>
   <Card/>

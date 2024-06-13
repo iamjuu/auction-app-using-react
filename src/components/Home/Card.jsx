@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 const Card = () => {
   return (
     <Link to="/details" className="block mb-8">
-      <div className="relative bg-white border border-gray-300 rounded-lg shadow-lg  md:max-w-sm">
+<div className="relative bg-white border border-gray-300 rounded-lg shadow-lg  md:max-w-sm">
+
         <img
           className="object-cover w-full h-80 rounded-t-lg"
           src="https://via.placeholder.com/400x300" // Example image URL
