@@ -8,7 +8,8 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex border-b py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50">
+    <div className="">  
+      <div className="flex border-b py-4 px-4 sm:px-10 font-[sans-serif] min-h-[70px] tracking-wide relative z-50  ">
         <div className="flex flex-wrap gap-5 w-full">
           <Link to="">
             <p className="text-blue-700 text-lg font-bold hover:translate-x-[10p] hover:translate-y-[10px] delay-200 duration-200">
@@ -111,6 +112,8 @@ const Header = () => {
           </div>
         </div>
       </div>
+      </div>
+
     </>
   );
 };

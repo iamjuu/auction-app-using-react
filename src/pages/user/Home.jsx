@@ -7,7 +7,7 @@ const Home = () => {
   const [menu, setMenu] = useState(false);
 
   return (
-    <div>      <div className="flex items-center justify-center w-screen h-10">
+    <div>      <div className="flex items-center justify-center  h-10">
       <div className="w-44">
         <div className="flex justify-center items-center">
           <button onClick={() => setMenu(!menu)}>
@@ -68,7 +68,7 @@ const Home = () => {
     <Caroseal/>
    </div>
    {/* card   */}
-<div className=" mt-5  w-screen  items-center justify-center  flex gap-5 flex-wrap">
+<div className=" mt-5  items-center justify-center  flex gap-5 flex-wrap">
   <Card/>
   <Card/>
   <Card/>
