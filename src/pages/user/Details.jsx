@@ -2,17 +2,26 @@ import React from 'react';
 
 const Details = () => {
   return (
-    <div className='mt-10  flex justify-center flex-col gap-5 items-center '>
-    <div >
-      <div className='w-[200px] h-[200px] sm:w-[500px] md:w-[700px] lg:w-[900px] bg-red-100'>
-      </div>
+    <>
+    <div className='flex flex-col mb-10 mt-10 gap-5'>   
+
+   
+     <div className=' justify-center  flex'>  
+    <div className=' sm:w-40 sm:h-32  w-96 h-80 bg-gray-400  '>
     </div>
-      <div className='flex flex-wrap justify-center gap-10 sm:w-[700px] h-[300px] sm:h-[200px] '  >
-        <div className='w-44 h-44 bg-slate-400'>pic</div>
-        <div className='w-44 h-44 bg-slate-400'>pic</div>     
-        <div className='w-44 h-44 bg-slate-400'>pic</div>  
-      </div>
     </div>
+
+
+    <div className='flex  gap-10  flex-wrap justify-center'>
+    <div className='  w-44 h-44 bg-red-100  '>
+    </div>
+    <div className='w-44 h-44 bg-red-200  '>
+    </div>
+    <div className='w-44 h-44 bg-red-300  '>
+    </div>
+    </div>
+    </div>
+    </>
   );
 }
 
