@@ -22,8 +22,8 @@ const Home = () => {
                   hello
                 </button>
               </li>
-              <li className="hover:bg-blue-200 w-full text-center py-2">
-                <Link to="/house" className="block w-full">House</Link>
+              <li className=" w-full text-center py-2">
+                <Link to="/house" className="block hover:bg-blue-200 w-full">House</Link>
               </li>
               <li className="hover:bg-blue-200 w-full text-center py-2">
                 <Link to="/land" className="block w-full">Land</Link>
@@ -49,27 +49,27 @@ const Home = () => {
       <div className="hidden md:flex">
         <ul className="md:flex gap-10">
         <li className="p-2  ">
-                <button className=" bg-red-600 w-14 border shadow-xl text-white rounded-md">
-                  Live
+                <button className=" bg-red-600 w-32 h-10 border shadow-xl text-white rounded-md">
+                  Live Auction
                 </button>
               </li>
-          <li className="hover:bg-blue-200 p-2 rounded">
-            <Link to="/house" className="block">House</Link>
+          <li className="p-2 rounded">
+            <Link to="/house" className="block  hover:bg-blue-100">House</Link>
           </li>
-          <li className="hover:bg-blue-200 p-2 rounded">
-            <Link to="/land" className="block">Land</Link>
+          <li className=" p-2 rounded">
+            <Link to="/land" className="block hover:bg-blue-100">Land</Link>
           </li>
-          <li className="hover:bg-blue-200 p-2 rounded">
-            <Link to="/flat" className="block">Flat</Link>
+          <li className=" p-2 rounded">
+            <Link to="/flat" className="block hover:bg-blue-100">Flat</Link>
           </li>
-          <li className="hover:bg-blue-200 p-2 rounded">
-            <Link to="/car" className="block">Car</Link>
+          <li className=" p-2 rounded">
+            <Link to="/car" className="block hover:bg-blue-100">Car</Link>
           </li>
-          <li className="hover:bg-blue-200 p-2 rounded">
-            <Link to="/bike" className="block">Bike</Link>
+          <li className=" p-2 rounded">
+            <Link to="/bike" className="block hover:bg-blue-100">Bike</Link>
           </li>
-          <li className="hover:bg-blue-200 p-2 rounded">
-            <Link to="/laptop" className="block">Laptop</Link>
+          <li className=" p-2 rounded">
+            <Link to="/laptop" className="block hover:bg-blue-100">Laptop</Link>
           </li>
         </ul>
       </div>

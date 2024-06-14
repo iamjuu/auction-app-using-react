@@ -5,9 +5,11 @@ const footer = () => {
     <div>
       
 
-<footer className="bg-white dark:bg-blue-100">
+<footer className="">
     <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+                  <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="md:flex md:justify-between">
+
           <div className="mb-6 md:mb-0">
               <a href="https://flowbite.com/" className="flex items-center">
                   <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-blue-900">Auction</span>
@@ -21,8 +23,9 @@ const footer = () => {
                           <a href="https://flowbite.com/" className="hover:underline">Flowbite</a>
                       </li>
                       <li>
-                          <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a>
+                          <a href="https://tailwindcss.com/" className="hover:underline">instagram</a>
                       </li>
+                 
                   </ul>
               </div>
               <div>
@@ -49,7 +52,7 @@ const footer = () => {
               </div>
           </div>
       </div>
-      <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      {/* <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" /> */}
       <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.
           </span>
