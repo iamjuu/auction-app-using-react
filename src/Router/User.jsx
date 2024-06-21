@@ -13,10 +13,10 @@ import UserLayout from "../layout/layout";
 const UserRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<UserLayout />}>
+      <Route path="otp" element={<Otp />} />
         <Route path="signup" element={<Signup />} />
         <Route path="login" element={<Login />} />
-        <Route path="otp" element={<Otp />} />
+      <Route path="/" element={<UserLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/details" element={<Details />} />
