@@ -84,9 +84,6 @@ const Header = () => {
                     <li className="hover:bg-[#007bff] hover:text-white">Contect</li>
                   </Link>
                 </ul>
-                <div>
-                  <button></button>
-                </div>
               </div>
             ) : (
               <FaBars className="text-2xl" />
