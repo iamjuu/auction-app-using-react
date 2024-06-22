@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import AddBtn from '../btn';
+// import AddBtn from '../btn';
 
 const Header = () => {
   const [menu, setMenu] = useState([false]);
@@ -53,14 +53,14 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <div className="">
+          {/* <div className="">
             <Link to="/addproperty">
               <AddBtn
                 className="bg-blue-800 text-white font-bold py-2 px-4 rounded cursor-pointer"
                 name={"Add property"}
               />
             </Link>
-          </div>
+          </div> */}
 
           <button
             onClick={() => setMenu(!menu)}

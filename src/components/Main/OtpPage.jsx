@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Bg  from '../../assets/main/otp.png'
- const OtpPage = () => {
+ const OtpPage = ({handleSubmit}) => {
     const [inputs, setInputs] = useState(["", "", "", ""]);
 
     const handleKeyDown = (e, index) => {
