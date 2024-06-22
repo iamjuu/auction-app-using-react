@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import AddBtn from '../../components/btn';
-
+import Pic1 from '../../assets/main/boys.png'
 
 const home = () => {
   return (
@@ -20,52 +20,74 @@ const home = () => {
             <div className="p-4">
 
       <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-200">
-          <thead>
-            <tr className="bg-gray-100">
-              <th className="text-left py-2 px-4 border-b">Image</th>
-              <th className="text-left py-2 px-4 border-b">Price</th>
-              <th className="text-left py-2 px-4 border-b">Address</th>
-              <th className="text-left py-2 px-4 border-b">Status</th>
-              <th className="text-left py-2 px-4 border-b">Edit</th>
-              <th className="text-left py-2 px-4 border-b">Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="hover:bg-gray-50">
-              <td className="py-10 px-10 border-b">John Doe</td>
-              <td className="py-10 px-10 border-b">28</td>
-              <td className="py-10 px-10 border-b">New York</td>
-              <td className="py-10 px-10 border-b">Software Developer</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr className="hover:bg-gray-50">
-              <td className="py-10 px-10 border-b">Jane Smith</td>
-              <td className="py-10 px-10 border-b">34</td>
-              <td className="py-10 px-10 border-b">Los Angeles</td>
-              <td className="py-10 px-10 border-b">Graphic Designer</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr className="hover:bg-gray-50">
-              <td className="py-10 px-10 border-b">Emily Johnson</td>
-              <td className="py-10 px-10 border-b">25</td>
-              <td className="py-10 px-10 border-b">Chicago</td>
-              <td className="py-10 px-10 border-b">Data Analyst</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr className="hover:bg-gray-50">
-              <td className="py-10 px-10 border-b">Michael Brown</td>
-              <td className="py-10 px-10 border-b">30</td>
-              <td className="py-10 px-10 border-b">Houston</td>
-              <td className="py-10 px-10 border-b">Project Manager</td>
-              <td></td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
+      <table className="w-full table-auto">
+            <thead>
+              <tr className="bg-gray-200">
+                <th className="px-4 py-2 text-center">Image </th>
+                <th className="px-4 py-2 text-center">Phone </th>
+                <th className="px-4 py-2 text-center">Location </th>
+                <th className="px-4 py-2 text-center">price </th>
+                <th className="px-4 py-2 text-center">Status</th>
+                <th className="px-4 py-2 text-center"> </th>
+                <th className="px-4 py-2 text-center"> </th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr
+                  className="hover:bg-gray-100 hover:bg-opacity-25"
+                >
+                  <td className="px-4 py-2 text-center"><img src={Pic1} className="w-32 h-32" alt="" /></td>
+                  <td className="px-4 py-2 text-center">7025715250</td>
+                  
+                  <td className="px-4 py-2 text-center">kannur,kerala</td>
+                  <td className="px-4 py-2 text-center">100,000</td>
+                  <td className="px-4 py-2 text-center"> deal </td>
+                  <td className="">
+                    
+                    <button
+                      className="bg-yellow-500 hover:bg-yellow-600 text-white  px-3 py-1 rounded-md"
+                    >
+                      edit
+                    </button>
+                  </td>
+
+                  <td><button
+                      className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md"
+                    >
+                      Delete 
+                    </button> </td>
+                  
+                </tr>
+
+                {/* ********************** */}
+                <tr
+                  className="hover:bg-gray-100 hover:bg-opacity-25"
+                >
+                  <td className="px-4 py-2 text-center"><img src={Pic1} className="w-32 h-32" alt="" /></td>
+                  <td className="px-4 py-2 text-center">7025715250</td>
+                  
+                  <td className="px-4 py-2 text-center">kannur,kerala</td>
+                  <td className="px-4 py-2 text-center">100,000</td>
+                  <td className="px-4 py-2 text-center"> deal </td>
+                  <td className="">
+                    
+                    <button
+                      className="bg-yellow-500 hover:bg-yellow-600 text-white  px-3 py-1 rounded-md"
+                    >
+                      edit
+                    </button>
+                  </td>
+
+                  <td><button
+                      className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md"
+                    >
+                      Delete 
+                    </button> </td>
+                  
+                </tr>
+         
+            </tbody>
+          </table>
       </div>
     </div>
 
