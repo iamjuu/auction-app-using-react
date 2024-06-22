@@ -4,7 +4,6 @@ import Signup from "../pages/user/Signup";
 import Otp from "../pages/user/Otp";
 import Login from "../pages/user/Login";
 import Home from "../pages/user/Home";
-import AddProperty from "../pages/user/AddProduct";
 import Details from "../pages/user/Details";
 import About from "../pages/user/About";
 import Service from "../pages/user/Service";
@@ -22,7 +21,6 @@ const UserRoutes = () => {
         <Route path="/details" element={<Details />} />
         <Route path="/contect" element={<Contect />} />
         <Route path="/service" element={<Service />} />
-        <Route path="AddProperty" element={<AddProperty />} />
       </Route>
     </Routes>
   );

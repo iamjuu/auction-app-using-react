@@ -16,7 +16,7 @@ const home = () => {
 
          
   <div className=" ">
-            <Link to="/addproperty">
+            <Link to="/agent/addproperty">
               <AddBtn
                 className="bg-blue-500  hover:bg-blue-800 text-white font-bold py-2 px-4 rounded cursor-pointer"
                 name={"Add property"}
@@ -26,11 +26,12 @@ const home = () => {
           <div>
 
             {/* profile  */}
+            <Link to='/agent/profile'>
             <div className=''>
             <  FaRegUser 
             className='text-3xl'/>
-
             </div>
+            </Link>
           </div>
           </div>
         
