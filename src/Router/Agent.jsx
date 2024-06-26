@@ -11,7 +11,7 @@ const AgentRoutes = () => {
       <Route path="/" element={<AgentLayout />}>
         <Route path="agenthome" element={<AgentHome />} />
         <Route path="profile" element={<ProfilePage />} />
-        <Route path="AddProperty" element={<AddProperty />} />
+        <Route path="addproperty" element={<AddProperty />} />
       </Route>
     </Routes>
   );

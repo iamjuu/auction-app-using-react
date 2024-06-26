@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Formik, Form, Field } from 'formik';
 import { AiOutlineUser } from 'react-icons/ai';
 import { HiOutlineMail } from 'react-icons/hi';
@@ -22,17 +22,20 @@ const options = [
   { value: "Agent", label: "Agent" }
 ];
 
+
+
 const SignupForm = () => {
   const navigate = useNavigate();
 
   const [type, setType] = useState(options[0]);
   console.log(initialValues,'data');
 
+
  const  handleSubmit = async(values)=>{
   try {
     console.log(values,'data');
         const response = await axiosInstance.post('/signup',values)
-        console.log(response.data);
+       
         if(response.status==200){
           navigate('/otp');
           }else{
@@ -42,6 +45,7 @@ const SignupForm = () => {
       } catch (error) {
         console.error('There was an error in signup!', error);
       }
+   
  }
   return (
     <div className='flex flex-col justify-center items-center bg-white p-8 rounded-md shadow-lg'>

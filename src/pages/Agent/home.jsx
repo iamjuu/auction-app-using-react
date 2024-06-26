@@ -86,7 +86,7 @@ const home = () => {
                   
                   <td className="px-4 py-2 text-center">kozhikode,kerala</td>
                   <td className="px-4 py-2 text-center">300,000</td>
-                  <td className="px-4 py-2 text-center">  not deal </td>
+                  <td className="px-4 py-2 text-center   text-red-600">  not deal </td>
                   <td className="">
                     
                     <button

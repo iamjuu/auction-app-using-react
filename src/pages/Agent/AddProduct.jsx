@@ -28,9 +28,7 @@ const PropertyForm = () => {
   // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("here");
     console.log(formData, "form Data");
-
     // Create a FormData object to handle file upload
     const data = new FormData();
     for (const key in formData) {
@@ -38,7 +36,7 @@ const PropertyForm = () => {
     }
 
     try {
-      const response = await axiosInstance.post("/addproperty", data, {
+      const response = await axiosInstance.post("/addproperty", formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
