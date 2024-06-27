@@ -21,9 +21,9 @@ const Otp = () => {
         console.log(respones.data.TypeIs,'typeee');
         const {TypeIs}=respones.data
         if(TypeIs=='User' ){
-          navigate('/')
+          navigate('/login')
         } else if ( TypeIs=='Agent') {
-          navigate('/agent/agenthome')
+          navigate('/login')
         }else{
           navigate('/otp')
 

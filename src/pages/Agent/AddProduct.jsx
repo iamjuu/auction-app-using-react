@@ -2,7 +2,6 @@ import axiosInstance from "../../instence/axiosinstance";
 import { useState } from "react";
 
 const PropertyForm = () => {
-  // Step 1: Initialize state
   const [formData, setFormData] = useState({
     name: '',
     propertyname: '',
@@ -13,30 +12,27 @@ const PropertyForm = () => {
     propertyType: ''
   });
 
-  // Handle change function
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Handle file change
   const handleFileChange = (event) => {
     const { name, files } = event.target;
     setFormData({ ...formData, [name]: files[0] });
   };
 
-  // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(formData, "form Data");
-    // Create a FormData object to handle file upload
+    
     const data = new FormData();
     for (const key in formData) {
       data.append(key, formData[key]);
     }
 
     try {
-      const response = await axiosInstance.post("/addproperty", formData, {
+      const response = await axiosInstance.post("/addproperty", data, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
