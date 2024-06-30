@@ -16,7 +16,7 @@ const Home = () => {
           {menu && (
 
             // icone setting 
-<ul className="bg-gray-100 -mt-52  w-36 flex flex-col items-center relative z-10">
+<ul className="bg-gray-100    w-36 flex flex-col items-center relative z-10">
 
 <li className="w-full text-center py-2">
   <Link to="/house" className="block hover:bg-blue-200 w-full">House</Link>
@@ -37,7 +37,6 @@ const Home = () => {
   <Link to="/laptop" className="block w-full">Laptop</Link>
 </li>
 </ul>
-
           )}
         </div>
       </div>
@@ -72,7 +71,7 @@ const Home = () => {
             <Link to="/bike" className="block hover:bg-blue-100 transition duration-300 ease-in-out">Bike</Link>
           </li>
           <li className=" p-2 rounded">
-            <Link to="/laptop" className="block hover:bg-blue-100  transition duration-300 ease-in-out">Laptop</Link>
+            <Link to="/laptop" className="block hover:bg-blue-100  transition duration-300 ease-in-out">Laaaaptop</Link>
           </li>
         </ul>
       </div>

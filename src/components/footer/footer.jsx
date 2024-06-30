@@ -89,13 +89,11 @@ const footer = () => {
               </a>
           </div>
           {/* social media icons  */}
-      <div className=' bg-slate-500 h-60 '><ul className='flex gap-4 
-      '>
-        <li ><BsWhatsapp className='text-2xl'/></li>
-        <li>  <a href=""><CgInstagram className='text-2xl'/></a> </li>
-        {/* <li> <FaGithub  className='text-2xl'/></li> */}
-        <li>  <SiLinkedin  className='text-2xl'/> </li>
-        <li> <RiTwitterXLine className='text-2xl'/></li>
+      <div className='  h-60 '><ul className='flex gap-4'>
+        <li>  <a href=""><BsWhatsapp className='text-2xl'/></a></li>
+        <li>  <a href="https://www.instagram.com/muhammed_ajmalcc"> <CgInstagram className='text-2xl'/></a> </li>
+        <li>  <a href="https://www.linkedin.com/in/muhammed-ajmal-a39a58298/"> <SiLinkedin  className='text-2xl'/></a> </li>
+        <li>  <a href=""> <RiTwitterXLine className='text-2xl'/></a></li>
       </ul>
 
       </div>
