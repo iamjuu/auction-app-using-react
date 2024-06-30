@@ -9,6 +9,7 @@ import About from "../pages/user/About";
 import Service from "../pages/user/Service";
 import Contect from "../pages/user/Contect";
 import UserLayout from "../layout/layout";
+import Live from "../pages/user/live"
 const UserRoutes = () => {
   return (
     <Routes>
@@ -21,6 +22,9 @@ const UserRoutes = () => {
         <Route path="/details" element={<Details />} />
         <Route path="/contect" element={<Contect />} />
         <Route path="/service" element={<Service />} />
+        <Route path="/live" element={<Live />} />
+
+
       </Route>
     </Routes>
   );

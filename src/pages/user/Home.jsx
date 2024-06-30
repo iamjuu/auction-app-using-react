@@ -16,7 +16,7 @@ const Home = () => {
           {menu && (
 
             // icone setting 
-<ul className="bg-gray-100    w-36 flex flex-col items-center relative z-10">
+<ul className="bg-gray-100  mt-1  w-36 flex flex-col items-center relative z-10">
 
 <li className="w-full text-center py-2">
   <Link to="/house" className="block hover:bg-blue-200 w-full">House</Link>
@@ -45,9 +45,7 @@ const Home = () => {
       <div className="hidden md:flex">
         <ul className="md:flex gap-10">
         <li className="p-2">
-  <button className="bg-red-500 w-32 h-10 border shadow-xl text-white rounded-md transition duration-300 ease-in-out hover:bg-red-600  hover:text-gray-00">
-    Live Auction
-  </button>
+
 </li>
 
 <li className="p-2 rounded">

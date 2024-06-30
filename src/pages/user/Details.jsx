@@ -1,13 +1,8 @@
 import React from 'react';
-import Bg1 from '../../assets/deatail/b1.jpg'
-import Bg2 from '../../assets/deatail/b2.jpg'
-import Bg3 from '../../assets/deatail/b3.jpeg'
 import Bg4 from '../../assets/deatail/b4.jpeg'
-import Bg5 from '../../assets/deatail/th (1).jpeg'
 import Bg6 from '../../assets/deatail/th (2).jpeg'
-import Bg7 from '../../assets/deatail/th (3).jpeg'
 import Bg8 from '../../assets/deatail/th (4).jpeg'
-import Bg9 from '../../assets/deatail/th.jpeg'
+
  
 const Details = () => {
   return (
