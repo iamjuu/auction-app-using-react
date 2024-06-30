@@ -7,8 +7,8 @@ const Login = () => {
 
   const  handleSubmit= async(data)=>{
     try {
-      const response = await axiosInstance.post('/signup',data)
       console.log(data,'data');
+      const response = await axiosInstance.post('/login',data)
       console.log(response,'front data');
       navigate('/');
     } catch (error) {

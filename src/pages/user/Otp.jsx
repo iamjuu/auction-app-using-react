@@ -18,15 +18,11 @@ const Otp = () => {
       console.log(datas);
       try {
         const respones = await axiosInstance.post("/otp", datas);
-        console.log(respones.data.TypeIs,'typeee');
-        const {TypeIs}=respones.data
-        if(TypeIs=='User' ){
-          navigate('/login')
-        } else if ( TypeIs=='Agent') {
+        console.log(respones.data.TypeIs,'this is the type');
+        if(respones.data==true){
           navigate('/login')
         }else{
           navigate('/otp')
-
         }
       } catch (err) {
         console.log(err);
