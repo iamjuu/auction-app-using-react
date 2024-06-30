@@ -1,4 +1,9 @@
 import React from 'react';
+import { BsWhatsapp } from "react-icons/bs";
+import { CgInstagram } from "react-icons/cg";
+import { RiTwitterXLine } from "react-icons/ri";
+// import { FaGithub } from "react-icons/fa";
+import { SiLinkedin } from "react-icons/si";
 
 const footer = () => {
   return (
@@ -83,6 +88,17 @@ const footer = () => {
                   <span className="sr-only">Dribbble account</span>
               </a>
           </div>
+          {/* social media icons  */}
+      <div className=' bg-slate-500 h-60 '><ul className='flex gap-4 
+      '>
+        <li ><BsWhatsapp className='text-2xl'/></li>
+        <li>  <a href=""><CgInstagram className='text-2xl'/></a> </li>
+        {/* <li> <FaGithub  className='text-2xl'/></li> */}
+        <li>  <SiLinkedin  className='text-2xl'/> </li>
+        <li> <RiTwitterXLine className='text-2xl'/></li>
+      </ul>
+
+      </div>
       </div>
     </div>
 </footer>
