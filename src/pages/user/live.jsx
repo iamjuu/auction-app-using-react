@@ -2,13 +2,16 @@ import React from "react";
 import Graph from "../user/Graph";
 import Clock from "../user/clock";
 import PriceButton from "../../components/Home/PriceButton";
+import Bg1 from "../../assets/deatail/b4.jpeg"
 
 const live = () => {
   return (
     <>
       <Clock />
       <div className="  md:flex md:justify-around gap-4 ">
-        <div className="w-96 h-80 mt-5   bg-slate-300 rounded-lg"></div>
+        <div className="w-96 h-80 mt-5  rounded-lg">
+          <img src={Bg1} alt="" />
+        </div>
         {/* btn  */}
         <div className="flex  gap-5 mt-5 flex-col">
 

@@ -25,7 +25,7 @@ const Home = () => {
           <div>
             <Link to="/agent/addproperty">
               <AddBtn
-                className="bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded cursor-pointer"
+                className="bg-blue-500 hover:bg-blue-800  font-bold py-2 px-4 rounded cursor-pointer"
                 name={"Add property"}
               />
             </Link>
