@@ -69,7 +69,7 @@ const Home = () => {
             <Link to="/bike" className="block hover:bg-blue-100 transition duration-300 ease-in-out">Bike</Link>
           </li>
           <li className=" p-2 rounded">
-            <Link to="/laptop" className="block hover:bg-blue-100  transition duration-300 ease-in-out">Laaaaptop</Link>
+            <Link to="/laptop" className="block hover:bg-blue-100  transition duration-300 ease-in-out">Laptop</Link>
           </li>
         </ul>
       </div>

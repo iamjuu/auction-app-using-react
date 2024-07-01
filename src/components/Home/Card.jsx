@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Bg1 from '../../assets/deatail/b1.jpg'
+import PriceBtn from "../Home/PriceButton"
 
 const Card = () => {
   return (
@@ -16,9 +17,9 @@ const Card = () => {
             Product Title
           </h5>
           <p>$100</p>
+          <PriceBtn data={10_000}  />
         </div>
         <div className="absolute top-4 right-4">
-         
           
         </div>
       </div>

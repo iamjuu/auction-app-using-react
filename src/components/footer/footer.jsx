@@ -1,8 +1,8 @@
 import React from 'react';
 import { BsWhatsapp } from "react-icons/bs";
 import { CgInstagram } from "react-icons/cg";
-import { RiTwitterXLine } from "react-icons/ri";
 // import { FaGithub } from "react-icons/fa";
+import { RiTwitterXLine } from "react-icons/ri";
 import { SiLinkedin } from "react-icons/si";
 
 const footer = () => {
@@ -53,6 +53,7 @@ const footer = () => {
                       <li>
                           <a href="#" className="hover:underline">Terms &amp; Conditions</a>
                       </li>
+                     
                   </ul>
               </div>
           </div>
