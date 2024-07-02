@@ -4,8 +4,10 @@ import Dashboard from '../pages/admin/Dashboard';
 const AdminLayout = () => {
   return (
     <div>
-      <Dashboard/>
+      
+      {/* <Dashboard/> */}
       <Outlet/>
+
     </div>
   );
 }

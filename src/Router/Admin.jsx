@@ -9,6 +9,7 @@ const Admin = () => {
     <Route path="/" element={<AdminLayout />}>
       <Route path="dashboard" element={<Dashboard />} />
 
+
     </Route>
   </Routes>
   );
