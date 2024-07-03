@@ -60,7 +60,7 @@ const Home = () => {
             <li className="p-2 rounded">
               <Link
                 to="/house"
-                className="block hover:text-blue-800 hover:font-bold transition duration-300 ease-in-out"
+                className="block hover:text-blue-600 hover:font-bold transition duration-300 ease-in-out"
               >
                 House
               </Link>
@@ -68,7 +68,7 @@ const Home = () => {
             <li className=" p-2 rounded">
               <Link
                 to="/land"
-                className="block hover:bg-blue-100 transition duration-300 ease-in-out"
+                className="block hover:text-blue-600 hover:font-bold transition duration-300 ease-in-out"
               >
                 Land
               </Link>
@@ -76,7 +76,7 @@ const Home = () => {
             <li className=" p-2 rounded">
               <Link
                 to="/flat"
-                className="block hover:bg-blue-100 transition duration-300 ease-in-out"
+                className="block hover:text-blue-600 hover:font-bold transition duration-300 ease-in-out"
               >
                 Flat
               </Link>
@@ -84,7 +84,7 @@ const Home = () => {
             <li className=" p-2 rounded">
               <Link
                 to="/car"
-                className="block hover:bg-blue-100 transition duration-300 ease-in-out"
+                className="block hover:text-blue-600 hover:font-bold transition duration-300 ease-in-out"
               >
                 Car
               </Link>
@@ -92,7 +92,7 @@ const Home = () => {
             <li className=" p-2 rounded">
               <Link
                 to="/bike"
-                className="block hover:bg-blue-100 transition duration-300 ease-in-out"
+                className="block hover:text-blue-600 hover:font-bold transition duration-300 ease-in-out"
               >
                 Bike
               </Link>
@@ -100,7 +100,7 @@ const Home = () => {
             <li className=" p-2 rounded">
               <Link
                 to="/laptop"
-                className="block hover:bg-blue-100  transition duration-300 ease-in-out"
+                className="block hover:text-blue-600 hover:font-bold transition duration-300 ease-in-out"
               >
                 Laptop
               </Link>
