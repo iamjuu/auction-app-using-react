@@ -11,11 +11,16 @@ const handleSubmit = async (data) => {
   try {
     console.log(data, 'data');
     const response = await axiosInstance.post('/login', data);
-    if(response.data.role=='user'){
-      navigate('/')
-    }else{
-      navigate('/agent/agenthome')
-    }
+    const token =response.data.token;
+    
+  
+  if(response.status ==200){
+    response.data.role=='user' ? navigate('/'): navigate('/agent/agenthome')
+    localStorage.setItem('jwt',token)
+  }
+      
+   
+  
   } catch (error) {
     if (error) {
       const errorMsg = error.response.data.message;
