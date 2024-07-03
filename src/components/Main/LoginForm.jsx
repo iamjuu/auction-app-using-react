@@ -3,6 +3,7 @@ import { Formik, Form, Field } from 'formik';
 import { HiOutlineMail } from 'react-icons/hi';
 import { GoLock } from 'react-icons/go';
 import { Link } from 'react-router-dom';
+import * as Yup from 'yup';
 import Bg from '../../assets/main/boys.png';
 
 const initialValues = {
@@ -10,18 +11,26 @@ const initialValues = {
   password: ''
 };
 
-function UserLogin({ handleSubmit }) {
+const validationSchema = Yup.object({
+  email: Yup.string().email('Invalid email address').required('Required'),
+  password: Yup.string().required('Required')
+});
+
+function UserLogin({ handleSubmit, error }) {
   return (
     <div className='flex flex-col justify-center items-center bg-white p-8 rounded-md shadow-lg'>
       <div className='w-28 h-28'>
         <h1 className='text-5xl font-bold'>Login</h1>
       </div>
       <div className='flex'>
-        {/* Responsive image display */}
         <div className="hidden sm:block">
           <img className='w-96' src={Bg} alt="" />
         </div>
-        <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
           {({ errors, touched }) => (
             <Form className="max-w-md mx-auto">
               <div className="mb-4">
@@ -60,6 +69,10 @@ function UserLogin({ handleSubmit }) {
                 )}
               </div>
 
+              <div className="text-red-500">
+                <h1>{error}</h1>
+              </div>
+
               <button
                 type="submit"
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -80,4 +93,5 @@ function UserLogin({ handleSubmit }) {
 }
 
 export default UserLogin;
- 
+
+
