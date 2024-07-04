@@ -51,6 +51,7 @@ const PropertyForm = () => {
       <form
         onSubmit={handleSubmit}
         className="flex flex-col items-center w-[300px] sm:w-[700px] md:[900px] mt-10 lg:[1200px]"
+        encType="multipart"
       >
         <div className="">
           <div className="mb-4">
@@ -99,6 +100,7 @@ const PropertyForm = () => {
               id="images"
               onChange={handleFileChange}
               className="border border-gray-300"
+              multiple
             />
           </div>
 

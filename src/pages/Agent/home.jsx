@@ -17,18 +17,17 @@ const COLORS = ['#0088FE', '#FF8042'];
 
 const Home = () => {
   const [properties,setProperties] = useState([])
+  console.log(properties)
   
   useEffect(() => {
     const getDetails = async () => {
       try {
         const response = await axiosInstance.get("/propertydetails");
-        console.log(response.data.PropertyDatas, 'response received from backend');
-
         if(response.status == 200){
           const data = response.data.PropertyDatas
           setProperties(data);
-          console.log(properties, 'properties data');
         }
+        console.log(properties, 'properties data');
        
       } catch (error) {
         console.error('Error fetching property details:', error);
@@ -66,6 +65,8 @@ const Home = () => {
               <thead>
                 <tr className="bg-gray-200">
                   <th className="px-4 py-2 text-center">Image</th>
+                  <th className="px-4 py-2 text-center">property name</th>
+
                   <th className="px-4 py-2 text-center">Phone</th>
                   <th className="px-4 py-2 text-center">Location</th>
                   <th className="px-4 py-2 text-center">Price</th>
@@ -77,10 +78,12 @@ const Home = () => {
               <tbody>
                     {properties.map((data, index) => (
                   <tr key={index} className="hover:bg-gray-100 hover:bg-opacity-25">
-                    <td className="px-4 py-2 text-center"><img src={Pic1} className="max-w-32 h-32" alt="" /></td>
-                    <td className="px-4 py-2 text-center">{data.name}</td>
-                    <td className="px-4 py-2 text-center">kannur, kerala</td>
-                    <td className="px-4 py-2 text-center">{data.number}</td>
+                    <td className="px-4 py-2 text-center"><img src={"http://localhost:5000/Agent/PropertyImage" + data.images } className="max-w-32 h-32" alt="" /></td>
+                    <td className="px-4 py-2 text-center">{data.propertyname}</td>
+
+                    <td className="px-4 py-2 text-center">{data.Phone}</td>
+                    <td className="px-4 py-2 text-center">{data.Address}</td>
+                    <td className="px-4 py-2 text-center">{data.minimumdata}</td>
                     <td className="px-4 py-2 text-center text-red-600">not deal</td>
                     <td>
                       <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md">edit</button>
