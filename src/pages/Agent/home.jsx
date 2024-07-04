@@ -1,21 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import AddBtn from '../../components/btn';
 import Pic1 from '../../assets/main/boys.png'
 import { FaRegUser } from "react-icons/fa6";
 import { PieChart, Pie, Cell, Tooltip, Legend } from 'recharts';
+import axiosInstance from '../../instence/axiosinstance'
 
-// Sample data for the pie chart
-
-// this data state is for count of user 
 const data = [
   { name: 'Deal', value: 400 },
   { name: 'Not Deal', value: 300 },
 ];
-
 const COLORS = ['#0088FE', '#FF8042'];
 
+
+
+
 const Home = () => {
+  const [properties,setProperties] = useState([])
+  
+  useEffect(() => {
+    const getDetails = async () => {
+      try {
+        const response = await axiosInstance.get("/propertydetails");
+        console.log(response.data.PropertyDatas, 'response received from backend');
+
+        if(response.status == 200){
+          const data = response.data.PropertyDatas
+          setProperties(data);
+          console.log(properties, 'properties data');
+        }
+       
+      } catch (error) {
+        console.error('Error fetching property details:', error);
+      }
+    };
+    getDetails();
+  }, []);
   return (
     <div>
 
@@ -55,32 +75,21 @@ const Home = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr className="hover:bg-gray-100 hover:bg-opacity-25">
-                  <td className="px-4 py-2 text-center"><img src={Pic1} className="max-w-32 h-32" alt="" /></td>
-                  <td className="px-4 py-2 text-center">7025715250</td>
-                  <td className="px-4 py-2 text-center">kannur,kerala</td>
-                  <td className="px-4 py-2 text-center">100,000</td>
-                  <td className="px-4 py-2 text-center  text-red-600"> not deal</td>
-                  <td>
-                    <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md">edit</button>
-                  </td>
-                  <td>
-                    <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md">Delete</button>
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-100 hover:bg-opacity-25">
-                  <td className="px-4 py-2 text-center"><img src={Pic1} className="max-w-32 h-32" alt="" /></td>
-                  <td className="px-4 py-2 text-center">7025715250</td>
-                  <td className="px-4 py-2 text-center">kannur,kerala</td>
-                  <td className="px-4 py-2 text-center">100,000</td>
-                  <td className="px-4 py-2 text-center">deal</td>
-                  <td>
-                    <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md">edit</button>
-                  </td>
-                  <td>
-                    <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md">Delete</button>
-                  </td>
-                </tr>
+                    {properties.map((data, index) => (
+                  <tr key={index} className="hover:bg-gray-100 hover:bg-opacity-25">
+                    <td className="px-4 py-2 text-center"><img src={Pic1} className="max-w-32 h-32" alt="" /></td>
+                    <td className="px-4 py-2 text-center">{data.name}</td>
+                    <td className="px-4 py-2 text-center">kannur, kerala</td>
+                    <td className="px-4 py-2 text-center">{data.number}</td>
+                    <td className="px-4 py-2 text-center text-red-600">not deal</td>
+                    <td>
+                      <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md">edit</button>
+                    </td>
+                    <td>
+                      <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md">Delete</button>
+                    </td>
+                  </tr>
+                ))}
 
                 {/* Repeat the row structure for other properties */}
               </tbody>
