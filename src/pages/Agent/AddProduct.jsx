@@ -6,7 +6,7 @@ const PropertyForm = () => {
     name: '',
     propertyname: '',
     minimumdata: '',
-    propertyimage: '',
+    images: '',
     Phone: '',
     Address: '',
     propertyType: ''
@@ -90,11 +90,11 @@ const PropertyForm = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="propertyimage">Property Image</label>
+            <label htmlFor="images">Property Image</label>
             <input
               type="file"
-              name="propertyimage"
-              id="propertyimage"
+              name="images"
+              id="images"
               onChange={handleFileChange}
               className="border border-gray-300"
             />
@@ -145,7 +145,7 @@ const PropertyForm = () => {
           </div>
 
           <div className="mt-6">
-            <button
+            <button 
               type="submit"
               className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none"
             >
