@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-// import AddBtn from '../btn';
-
+import { Link } from "react-router-dom"; 
+import { Navigate } from "react-router-dom";
 const Header = () => {
+  // const navigate = Navigate()
   const [menu, setMenu] = useState([false]);
+
+  // const handleHome=()=>{
+  //   navigate('/login')
+
+  // }
 
   return (
     <>
       <div className="">
         <div className="flex  border-b py-4 px-4 sm:px-10 font-[sans-serif] min-h-[70px] tracking-wide relative z-50  ">
           <div className="flex flex-wrap gap-5 w-full">
-            <Link to="">
+            <Link to="/login">
               <p className="text-blue-700 text-lg font-bold hover:translate-x-[10p] hover:translate-y-[10px] delay-200 duration-200">
                 Auction
               </p>
@@ -53,7 +58,7 @@ const Header = () => {
               </ul>
             </div>
             <Link  to="/live">
-            <button className="bg-red-500 w-32 h-10 border shadow-xl text-white rounded-md transition duration-300 ease-in-out hover:bg-red-600  hover:text-gray-00">
+            <button  className="bg-red-500 w-32 h-10 border shadow-xl text-white rounded-md transition duration-300 ease-in-out hover:bg-red-600  hover:text-gray-00">
               Live Auction
             </button>
             </Link>

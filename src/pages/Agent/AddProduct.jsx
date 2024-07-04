@@ -1,7 +1,9 @@
 import axiosInstance from "../../instence/axiosinstance";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const PropertyForm = () => {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: '',
     propertyname: '',
@@ -23,9 +25,7 @@ const PropertyForm = () => {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    console.log(formData, "form Data");
-    
+    event.preventDefault();    
     const data = new FormData();
     for (const key in formData) {
       data.append(key, formData[key]);
@@ -37,7 +37,9 @@ const PropertyForm = () => {
           'Content-Type': 'multipart/form-data',
         },
       });
-      console.log(response.data);
+      if(response.status==200){
+        navigate('/agent/agenthome')
+      }
     } catch (error) {
       console.error("There was an error submitting the form!", error);
     }

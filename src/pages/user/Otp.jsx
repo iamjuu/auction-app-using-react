@@ -21,6 +21,8 @@ const Otp = () => {
         console.log(respones.data.TypeIs,'this is the type');
         if(respones.data.TypeIs=='User'){
           navigate('/login')
+        }else if(respones.data.TypeIs=='Agent'){
+          navigate('/login')
         }else{
           navigate('/otp')
         }
