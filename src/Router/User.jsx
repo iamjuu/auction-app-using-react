@@ -10,23 +10,24 @@ import Service from "../pages/user/Service";
 import Contect from "../pages/user/Contect";
 import UserLayout from "../layout/layout";
 import Live from "../pages/user/live";
-
+import Massage from "../pages/user/massage";
 const UserRoutes = () => {
   return (
     <Routes>
+      <Route path="message" element={<Massage />} />
       <Route path="otp" element={<Otp />} />
       <Route path="signup" element={<Signup />} />
       <Route path="login" element={<Login />} />
       <Route path="/" element={<UserLayout />}>
-        <Route index element={<Home />} />  {/* Updated the path */}
+        <Route index element={<Home />} /> {/* Updated the path */}
         <Route path="about" element={<About />} />
-        <Route 
-          path="details" 
+        <Route
+          path="details"
           element={
             <PrivateRouter>
               <Details />
             </PrivateRouter>
-          } 
+          }
         />
         <Route path="contect" element={<Contect />} />
         <Route path="service" element={<Service />} />

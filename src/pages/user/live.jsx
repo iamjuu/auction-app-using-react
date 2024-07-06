@@ -2,7 +2,10 @@ import React from "react";
 import Graph from "../user/Graph";
 // import Clock from "../user/clock";
 import PriceButton from "../../components/Home/PriceButton";
-import Bg1 from "../../assets/deatail/b4.jpeg";
+import Bg1 from "../../assets/deatail/b3.jpeg";
+// import Bg2 from "..";
+
+
 
 const live = () => {
   return (
