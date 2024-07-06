@@ -3,19 +3,14 @@ import React, { useState } from 'react';
 import { BsThreeDots, BsFillChatDotsFill, BsFillGearFill } from 'react-icons/bs'; // Example icons from react-icons
 import PRofile from "../../assets/agent/WhatsApp Image 2024-01-31 at 15.20.21_c6aa30ef.jpg"
 const ChatComponent = () => {
-    const [message, setMessage] = useState('');
-  
+    const [message, setMessage] = useState('')
     const handleMessageChange = (event) => {
       setMessage(event.target.value);
-    };
-  
+    }
     const handleSendMessage = () => {
-      // Implement sending message functionality here
       console.log('Sending message:', message);
-      // Optionally, you can reset the message input field after sending
       setMessage('');
-    };
-  
+    }
     return (
       <div className="flex-1 p-2 sm:p-6 justify-between flex flex-col h-screen">
         <div className="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">

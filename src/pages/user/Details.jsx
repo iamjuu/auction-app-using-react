@@ -55,7 +55,7 @@ const Details = () => {
             {" "}
             <Link to="/message">
             <button>
-            <img className=" bg-transparent hover:scale-110 transition-opacity delay-200 mt-[-700px] w-24 sticky top-10" src={Gif} alt="" />
+            <img className="bg-transparent md:w-32  hover:scale-110 transition-opacity delay-200 mt-[-700px] w-10 sm:w-52 sticky top-10" src={Gif} alt="" />
             </button>
             </Link>
             </div>
