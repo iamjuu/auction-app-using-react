@@ -4,12 +4,15 @@ import { BsThreeDots, BsFillChatDotsFill, BsFillGearFill } from 'react-icons/bs'
 import PRofile from "../../assets/agent/WhatsApp Image 2024-01-31 at 15.20.21_c6aa30ef.jpg"
 const ChatComponent = () => {
     const [message, setMessage] = useState('')
+    // const [writemsg,setwritemsg] = useState('')
+    // setwritemsg(message)
     const handleMessageChange = (event) => {
       setMessage(event.target.value);
     }
     const handleSendMessage = () => {
       console.log('Sending message:', message);
-      setMessage('');
+      setMessage(message);
+      console.log(message,'this is meassge');
     }
     return (
       <div className="flex-1 p-2 sm:p-6 justify-between flex flex-col h-screen">
@@ -37,8 +40,13 @@ const ChatComponent = () => {
             </button>
           </div>
         </div>
-        <div id="messages" className="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch">
+        <div id="messages" className="   bg-red-400 flex flex-col  scrollbar-w-2 scrolling-touch">
           {/* Your chat messages here */}
+
+
+          <div className='  pl-10 pt-3  rounded-b-r-md rounded-tr-md rounded-bl-md -mt-20 w-44 h-10 bg-slate-200'>
+{message}
+          </div>
         </div>
         <div className="flex">
           <input

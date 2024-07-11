@@ -5,7 +5,7 @@ import Pic1 from "../../assets/main/boys.png";
 import { FaRegUser } from "react-icons/fa6";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 import axiosInstance from "../../instence/axiosinstance";
-import { BsThreeDots, BsFillGearFill } from "react-icons/bs"; // Example icons from react-icons
+import {  BsFillGearFill } from "react-icons/bs"; // Example icons from react-icons
 
 const data = [
   { name: "Deal", value: 400 },
@@ -37,29 +37,29 @@ const Home = () => {
 
 
 // delete btn alert
-  const handleDeleteClick = () => {
-    Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )
+ function deleteuser(id){
+  console.log(id,'property id');
+  Swal.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then( async(result) => {
+    if (result.isConfirmed) {
+      const response = await axiosInstance.post(`agent/userdelete?id=${id}`)
+      console.log(response.data,'data gotted');
+
+      Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
       }
     })
-  };
-
-
-
-
+}
 
   return (
     <div>
@@ -144,7 +144,7 @@ const Home = () => {
                       </button>{" "}
                     </td>
                     <td>
-                    <button  onClick={handleDeleteClick} className="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">
+                    <button  onClick={()=>deleteuser(data._id)} className="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">
   Delete
                       </button>
                     </td>
