@@ -1,11 +1,12 @@
 import React from 'react';
 import { Outlet } from "react-router-dom";
-import Dashboard from '../pages/admin/Dashboard';
+import SideBar from "../components/Admin/Dashboard/SideBar"
+import Header from "../components/Admin/Dashboard/Header"
 const AdminLayout = () => {
   return (
     <div>
-      
-      {/* <Dashboard/> */}
+      <Header/>
+      <SideBar/>
       <Outlet/>
 
     </div>

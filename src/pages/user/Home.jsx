@@ -1,10 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RiMenuFoldFill } from "react-icons/ri"; // Corrected the icon import
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import Card from "../../components/Home/Card";
 import Caroseal from "../../components/caroseal/Carseal";
+import axiosInstance from "../../instence/axiosinstance";
+
 const Home = () => {
   const [menu, setMenu] = useState(false);
+  const [card,setCard] = useState([])
+
+  
+  async function userCard() {
+    try {
+      const response = await axiosInstance.get('/usercard');
+      // console.log(response.data.userCard, 'data');
+      setCard(response.data.userCard);
+    } catch (error) {
+      console.log(error, ' error in looping card details in user home');
+    }
+  }
+
+  useEffect(() => {
+    userCard();
+  }, []);
+
+  useEffect(() => {
+    console.log(card, 'cards data'); // This will log the updated card state whenever it changes
+  }, [card]);
+
 
   return (
     <div>
@@ -112,10 +135,9 @@ const Home = () => {
         <Caroseal />
       </div>
       <div className=" mt-5  items-center justify-center  flex gap-5 flex-wrap">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        
+        <Card  CardData={card} />
+    
       </div>
     </div>
   );

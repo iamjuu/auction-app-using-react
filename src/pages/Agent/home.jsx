@@ -50,6 +50,7 @@ const Home = () => {
   }).then( async(result) => {
     if (result.isConfirmed) {
       const response = await axiosInstance.post(`agent/userdelete?id=${id}`)
+    
       console.log(response.data,'data gotted');
 
       Swal.fire(
@@ -57,6 +58,9 @@ const Home = () => {
         'Your file has been deleted.',
         'success'
       )
+      if(response.data ==200){
+        setProperties(properties.filter((data)=> data._id !== id))
+      }
       }
     })
 }
